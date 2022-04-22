@@ -12,7 +12,6 @@ Here it is a JS script to append hotkey F2 to make commit changes and save a cur
 
 ```javascript
 $(function() {
-    //console.log("I am here!");
     var dom = ace.require("ace/lib/dom");
     if (window.editor) {
         window.editor.commands.addCommand({
