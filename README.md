@@ -7,7 +7,7 @@ There is a Zope product to customize ZMI
 pip install git+https://github.com/sashad/Products.CustomZMI.git
 ```
 
-Create a files in a your zope project root folder **zmi.css** and **zmi.js**.
+Create files in a your zope project root folder **zmi.css** and **zmi.js**.
 Here you are a JS script to append hot key F2 to make commit changes and save a cursor position and a fullscreen mode.
 
 ```javascript
