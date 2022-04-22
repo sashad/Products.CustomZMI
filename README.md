@@ -1,12 +1,16 @@
 # Products.CustomZMI
 There is a Zope product to customize ZMI
 
-1. `pip install git+https://github.com/sashad/Products.CustomZMI.git`
+## Installation
+
+1. ```bash
+pip install git+https://github.com/sashad/Products.CustomZMI.git
+```
 
 2. Create a files in a root folder your zope project zmi.css and zmi.js
 
 here you are a JS script to append hot key F2 to make commit changes and save a cursor position and a fullscreen mode.
-`
+```javascript
 $(function() {
     //console.log("I am here!");
     var dom = ace.require("ace/lib/dom");
@@ -51,4 +55,4 @@ $(function() {
         }
     }
 });
-`
+```
