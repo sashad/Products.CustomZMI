@@ -10,5 +10,5 @@ setup(
     author='Aleksandr Demidov',
     author_email='demidoff@1vp.ru',
 
-    py_modules=['Products.CustomZMI'],
+    packages=['Products.CustomZMI'],
 )
