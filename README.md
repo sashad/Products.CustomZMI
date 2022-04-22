@@ -1,5 +1,5 @@
 # Products.CustomZMI
-There is a Zope product to customize ZMI
+It is a Zope product to customize ZMI of ZOPE 5
 
 ## Installation
 
