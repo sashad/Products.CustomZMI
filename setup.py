@@ -11,4 +11,7 @@ setup(
     author_email='demidoff@1vp.ru',
 
     packages=['Products.CustomZMI'],
+    package_data={'': ['configure.zcml']},
+    include_package_data=True,
+
 )
