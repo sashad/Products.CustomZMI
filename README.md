@@ -58,7 +58,7 @@ $(function() {
 
 It is an example **zmi.css**
 
-```javascript
+```css
 body {
     background-color: #EEEEEE !important;
 }
