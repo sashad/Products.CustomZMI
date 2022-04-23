@@ -55,3 +55,18 @@ $(function() {
     }
 });
 ```
+
+It is an example **zmi.css**
+
+```javascript
+body {
+    background-color: #EEEEEE !important;
+}
+#editor_container:after {
+    content:"Please press F2 to save changes, F10 for full screen view";
+    display:block;
+    margin-top:0;
+    font-size:11px;
+    color:#999;
+}
+```
