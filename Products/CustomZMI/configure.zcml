@@ -6,7 +6,7 @@
 
     <browser:resourceDirectory
         name="custom_zmi"
-        directory="."
+        directory="resources"
     />
 
     <subscriber
