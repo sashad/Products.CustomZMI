@@ -1,5 +1,7 @@
 /*
  * Override the original function show_ace_editor to make needed functionality
+ * The problem is ace editor initialization for some big files too long time.
+ * Second JQuery document ready event is not suitable for functionality initialization.
  */
 function show_ace_editor() {
     var saveTypes = ['dtml', 'text/javascript', 'application/javascript', 'application/x-javascript', 'text/css', 'application/css', 'application/x-css'];
