@@ -45,7 +45,7 @@ function show_ace_editor() {
 	window.editor = ace.edit("editor");
 	var value = $("textarea#content").val();
 	var content_type = $("input#contenttype").val();
-	if ( $("textarea#content").attr('data-contenttype') ) {
+	if ( (typeof content_type === "undefined" || !content_type) &&  $("textarea#content").attr('data-contenttype') ) {
 		content_type = $("textarea#content").attr('data-contenttype');
 	}
 	if (typeof content_type === "undefined" || ! content_type || content_type === 'text/x-unknown-content-type') {
