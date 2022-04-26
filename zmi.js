@@ -119,7 +119,6 @@ function show_ace_editor() {
         sessionStorage.setItem(obj.join('/'), JSON.stringify({row: position.row, col: position.column, fs: fullScreen}));
 	});
 	window.editor.on('focus', function() {
-    	console.log("I am here!");
         if (form) {
             var obj = form.attr('action').split('/');
             obj.shift(); obj.shift(); obj.shift();
@@ -142,7 +141,6 @@ function show_ace_editor() {
             }
         }
     });
-    //console.log("I am here!");
     window.scrollTo(0, 0);
     window.editor.focus();
 	window.editor.getSession().on("change",function() {
