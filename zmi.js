@@ -118,7 +118,21 @@ function show_ace_editor() {
         var position = editor.selection.getCursor(); // to get the Position Object
         sessionStorage.setItem(obj.join('/'), JSON.stringify({row: position.row, col: position.column, fs: fullScreen}));
 	});
-	window.editor.on('focus', function() {
+    window.editor.on('changeSelection', function() {
+	    // on changeSelection event to save a cursor position
+        var obj = form.attr('action').split('/');
+        obj.shift(); obj.shift(); obj.shift();
+        obj.unshift('zope');
+        var pos = sessionStorage.getItem(obj.join('/'));
+        var fullScreen = false;
+        if (pos !== null) {
+            var sessionData = JSON.parse(pos);
+            fullScreen = sessionData.fs;
+        }
+        var position = editor.selection.getCursor(); // to get the Position Object
+        sessionStorage.setItem(obj.join('/'), JSON.stringify({row: position.row, col: position.column, fs: fullScreen}));
+    });
+    window.editor.on('focus', function() {
         if (form) {
             var obj = form.attr('action').split('/');
             obj.shift(); obj.shift(); obj.shift();
