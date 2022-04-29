@@ -23,7 +23,7 @@ function show_ace_editor() {
     });
     window.ace.require("ace/commands/default_commands").commands.push({
         name: "Save changes",
-        bindKey: "F2",
+        bindKey: "F4",
         exec: function(editor) {
             var fullScreen = !dom.toggleCssClass(document.body, "fullScreen");
             var submitElement = $("input:submit");
