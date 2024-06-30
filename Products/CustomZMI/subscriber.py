@@ -1,7 +1,6 @@
 import zope.component
 import zope.interface
 
-from zmi.styles import subscriber
 
 @zope.component.adapter(zope.interface.Interface)
 def css_paths(context):
