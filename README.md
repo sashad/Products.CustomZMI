@@ -16,6 +16,9 @@ I want a dark mode for ZMI ... )))
 $(function() {
     var dom = ace.require("ace/lib/dom");
     if (window.editor) {
+        // Load any your prefer theme.
+        window.editor.setTheme('ace/theme/tomorrow_night');
+        // window.editor.setTheme('ace/theme/chrome');
         window.editor.commands.addCommand({
             name: "Save changes",
             bindKey: "Ctrl-S",
