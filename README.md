@@ -15,6 +15,12 @@ I want a dark mode for ZMI ... )))
 ```javascript
 $(function() {
     var dom = ace.require("ace/lib/dom");
+    // Prevent global scroll from a mouse wheel in fullscreen mode.
+    document.body.addEventListener('wheel', function(e) {
+        if (dom.hasCssClass(document.body, "fullScreen") && e.cancelable) {
+            e.preventDefault();
+        }
+    }, {passive: false});
     if (window.editor) {
         // Load any your prefer theme.
         window.editor.setTheme('ace/theme/tomorrow_night');
