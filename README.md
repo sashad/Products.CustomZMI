@@ -30,6 +30,9 @@ $(function() {
         // Load any your prefer theme.
         window.editor.setTheme('ace/theme/tomorrow_night');
         // window.editor.setTheme('ace/theme/chrome');
+        window.editor.renderer.on('resize', function() {
+            window.scrollTo(0, 0);
+        });
         window.editor.commands.addCommand({
             name: "Save changes",
             bindKey: "Ctrl-S",
