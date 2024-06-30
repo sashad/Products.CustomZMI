@@ -10,6 +10,8 @@ pip install git+https://github.com/sashad/Products.CustomZMI.git
 Create files in your zope project root folder **zmi.css** and **zmi.js**.
 Here it is a JS script to append hotkey Ctrl-S to make commit changes and save a cursor position and a fullscreen mode.
 
+I want a dark mode for ZMI ... )))
+
 ```javascript
 $(function() {
     var dom = ace.require("ace/lib/dom");
