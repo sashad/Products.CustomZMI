@@ -3,8 +3,13 @@ It is a Zope product to customize ZMI of ZOPE 5.
 
 ## Installation
 
+Install Zope package, then ...
 ```bash
 pip install git+https://github.com/sashad/Products.CustomZMI.git
+```
+or
+```bash
+poetry add git+https://github.com/sashad/Products.CustomZMI.git
 ```
 
 Create files in your zope project root folder **zmi.css** and **zmi.js**.
