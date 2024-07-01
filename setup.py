@@ -12,6 +12,7 @@ setup(
 
     packages=['Products.CustomZMI'],
     package_data={'': ['configure.zcml']},
+    data_files=[('', ['resources/*'])],
     include_package_data=True,
     install_requires=[
         'Zope>=5.5.0',
