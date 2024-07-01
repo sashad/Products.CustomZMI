@@ -79,7 +79,7 @@ It is an example **zmi.css**
 
 ```css
 body {
-    background-color: ##E5E5E5 !important;
+    background-color: #E5E5E5 !important;
 }
 .zmi nav[role="navigation"] {
 	background-color: #E5E5E5;
