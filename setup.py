@@ -13,7 +13,6 @@ setup(
     packages=[
         'Products.CustomZMI',
         'Products.CustomZMI.resources',
-        'Products.CustomZMI.resources.ace.ajax.org'
     ],
     package_data={
         'Products.CustomZMI': ['configure.zcml'],
