@@ -10,11 +10,15 @@ setup(
     author='Aleksandr Demidov',
     author_email='demidoff@1vp.ru',
 
-    packages=['Products.CustomZMI', 'Products.CustomZMI.resources'],
+    packages=[
+        'Products.CustomZMI',
+        'Products.CustomZMI.resources',
+        'Products.CustomZMI.resources.ace.ajax.org'
+    ],
     package_data={
         'Products.CustomZMI': ['configure.zcml'],
         'Products.CustomZMI.resources': ['*'],
-        #        'Products.CustomZMI.resources.ace.ajax.org': ['*'],
+        'Products.CustomZMI.resources.ace.ajax.org': ['*'],
     },
     include_package_data=True,
     install_requires=[
