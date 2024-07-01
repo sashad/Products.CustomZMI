@@ -12,8 +12,8 @@ setup(
 
     packages=['Products.CustomZMI'],
     package_data={
-        '': ['configure.zcml'],
-        'resources': ['*'],
+        'Products.CustomZMI': ['configure.zcml'],
+        'Products.CustomZMI.resources': ['*'],
     },
     include_package_data=True,
     install_requires=[
