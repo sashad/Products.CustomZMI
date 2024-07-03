@@ -60,8 +60,8 @@ $(function() {
             exec: function(editor) {
                 let tab = $("ul.nav-tabs li");
                 let testLink = tab.filter(function (i, item) {
-                    let el = $(item)[0].outerText.toLowerCase();
-                    return el.indexOf('test') >= 0;
+                    let text = $(item).text().toLowerCase();
+                    return text.indexOf('test') >= 0;
                 }).first().find('a').attr('href');
                 if (testLink) {
                     window.location = testLink;
