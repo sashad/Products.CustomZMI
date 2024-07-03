@@ -54,6 +54,21 @@ $(function() {
                 form.submit();
             }
         });
+        window.editor.commands.addCommand({
+            name: "Test",
+            bindKey: "F9",
+            exec: function(editor) {
+                let tab = $("ul.nav-tabs li");
+                let testItem = tab.filter(function (i, item) {
+                    let el = $(item)[0].outerText.toLowerCase();
+                    return el.indexOf('test') >= 0;
+                }).first();
+                if (testItem.length > 0) {
+                    let testLink = testItem[0].children[0].getAttribute('href');
+                    window.location = testLink;
+                }
+            }
+        });
         var form = $('textarea#content').closest('form');
         if (form) {
             var obj = form.attr('action').split('/');
@@ -86,7 +101,7 @@ body {
 	padding-top:.8rem;
 }
 #editor_container:after {
-    content:"Please press Ctrl-S to save changes, F10 for full screen view";
+    content:"Please press Ctrl-S to save changes, F9 to call a test page, F10 for full screen view.";
     display:block;
     margin-top:0;
     font-size:11px;
