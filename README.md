@@ -59,12 +59,11 @@ $(function() {
             bindKey: "F9",
             exec: function(editor) {
                 let tab = $("ul.nav-tabs li");
-                let testItem = tab.filter(function (i, item) {
+                let testLink = tab.filter(function (i, item) {
                     let el = $(item)[0].outerText.toLowerCase();
                     return el.indexOf('test') >= 0;
-                }).first();
-                if (testItem.length > 0) {
-                    let testLink = testItem[0].children[0].getAttribute('href');
+                }).first().find('a').attr('href');
+                if (testLink) {
                     window.location = testLink;
                 }
             }
