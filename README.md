@@ -19,6 +19,8 @@ I want a dark mode for ZMI ... )))
 
 ```javascript
 $(function() {
+    // trigger extension
+    ace.require("ace/ext/language_tools");
     var dom = ace.require("ace/lib/dom");
     // Prevent global scroll from a mouse wheel in fullscreen mode.
     document.body.addEventListener('wheel', function(e) {
@@ -30,6 +32,12 @@ $(function() {
         // Load any your prefer theme.
         window.editor.setTheme('ace/theme/tomorrow_night');
         // window.editor.setTheme('ace/theme/chrome');
+        // enable autocompletion and snippets
+        window.editor.setOptions({
+            enableBasicAutocompletion: true,
+            enableSnippets: true,
+            enableLiveAutocompletion: true
+        });        
         window.editor.renderer.on('resize', function() {
             window.scrollTo(0, 0);
         });

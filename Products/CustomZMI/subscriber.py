@@ -20,6 +20,7 @@ def js_paths(context):
         return (
             # Reload ace editor by newer version.
             '/++resource++custom_zmi/ace.ajax.org/ace.js',
+            '/++resource++custom_zmi/ace.ajax.org/ext-language_tools.js',
             # Load a JS script from a ZODB root project.
             '/zmi.js',
         )
